@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セキュリティ モニター</title>
+    <!-- スタイルシート（外部ファイル） -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ヘッダー：タイトルと時計 -->
+<div id="header">
+    <h1>セキュリティ モニター</h1>
+    <span id="clock"></span>
+</div>
+
+<!-- カメラグリッド -->
+<div id="grid">
+
+    <!-- AtomCam Swing #1 -->
+    <div class="camera-panel" data-cam="swing1">
+        <div class="cam-title">
+            <span class="cam-name">ATOM Cam Swing 二階部屋左側</span>
+            <span class="status-badge connecting" id="status-swing1">接続中...</span>
+        </div>
+        <div class="cam-video">
+            <video id="video-swing1" autoplay muted playsinline></video>
+        </div>
+    </div>
+
+    <!-- AtomCam 2 -->
+    <div class="camera-panel" data-cam="atomcam2">
+        <div class="cam-title">
+            <span class="cam-name">ATOM Cam 2 玄関</span>
+            <span class="status-badge connecting" id="status-atomcam2">接続中...</span>
+        </div>
+        <div class="cam-video">
+            <video id="video-atomcam2" autoplay muted playsinline></video>
+        </div>
+    </div>
+
+    <!-- AtomCam Swing #2 -->
+    <div class="camera-panel" data-cam="swing2">
+        <div class="cam-title">
+            <span class="cam-name">ATOM Cam Swing 二階部屋右側</span>
+            <span class="status-badge connecting" id="status-swing2">接続中...</span>
+        </div>
+        <div class="cam-video">
+            <video id="video-swing2" autoplay muted playsinline></video>
+        </div>
+    </div>
+
+    <!-- Panel 4: リソースモニター -->
+    <div id="panel-metrics">
+        <div class="metrics-title">
+            <span class="metrics-name">リソースモニター</span>
+            <span id="metrics-status" class="status-badge connecting">取得中...</span>
+        </div>
+        <div class="metrics-grid">
+            <div class="chart-box">
+                <div class="chart-label">CPU 使用率 (%)</div>
+                <canvas id="chart-cpu"></canvas>
+            </div>
+            <div class="chart-box">
+                <div class="chart-label">CPU 温度 (℃)</div>
+                <canvas id="chart-temp"></canvas>
+            </div>
+            <div class="chart-box">
+                <div class="chart-label">Disk I/O (KB/s)</div>
+                <canvas id="chart-disk"></canvas>
+            </div>
+            <div class="chart-box">
+                <div class="chart-label">メモリ使用率 (%)</div>
+                <canvas id="chart-mem"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- リソースモニター全画面オーバーレイ（通常時は非表示） -->
+<div id="fullscreen-metrics-overlay" class="hidden">
+    <div id="fso-header">
+        <span id="fso-title">リソースモニター</span>
+        <span id="fso-status" class="status-badge connecting">取得中...</span>
+        <button id="fso-back-btn">&#9664; 戻る</button>
+    </div>
+    <div id="fso-charts">
+        <div class="fso-chart-box">
+            <div class="chart-label">CPU 使用率 (%)</div>
+            <canvas id="fso-chart-cpu"></canvas>
+        </div>
+        <div class="fso-chart-box">
+            <div class="chart-label">CPU 温度 (℃)</div>
+            <canvas id="fso-chart-temp"></canvas>
+        </div>
+        <div class="fso-chart-box">
+            <div class="chart-label">Disk I/O (KB/s)</div>
+            <canvas id="fso-chart-disk"></canvas>
+        </div>
+        <div class="fso-chart-box">
+            <div class="chart-label">メモリ使用率 (%)</div>
+            <canvas id="fso-chart-mem"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- カメラ全画面オーバーレイ（通常時は非表示） -->
+<div id="fullscreen-overlay" class="hidden">
+    <!-- カメラ名表示 -->
+    <div id="overlay-title"></div>
+    <!-- 映像表示エリア -->
+    <video id="overlay-video" autoplay muted playsinline></video>
+    <!-- 戻るボタン -->
+    <button id="overlay-back-btn">&#9664; 戻る</button>
+</div>
+
+<!-- メインスクリプト（外部ファイル） -->
+<script src="app.js"></script>
+
+</body>
+</html>

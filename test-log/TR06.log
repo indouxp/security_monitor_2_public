@@ -1,0 +1,28 @@
+スクリプトを 2026-05-19 12:41:35+09:00 に開始 [TERM="xterm-kitty" TTY="/dev/pts/2" COLUMNS="111" LINES="35"]
+pyenv: no such command `virtualenv-init'
+indo        1954       1  0 11:15 ?        00:00:00 /usr/bin/[01;31m[Kssh-agent[m[K -s
+[?2004h[31m0[0m [[32m0.01s(B[m] 260519-124136 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7m# リモートのファイルをローカルに取得してタイムスタンプを合わせる[27m
+[7mscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tr06_index.html[27m
+[7mecho "/tmp/tr06_index.html /var/www/html/index.html" > /tmp/tr06.txt[27m
+
+[7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m
+[7m../release.sh -c /tmp/tr06.txt indo@rpi4-1[27m[A[A[A[A[A[C[C# リモートのファイルをローカルに取得してタイムスタンプを合わせる
+scp -p indo@rpi4-1:/var/www/html/index.html /tmp/tr06_index.html
+echo "/tmp/tr06_index.html /var/www/html/index.html" > /tmp/tr06.txt
+
+cd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+../release.sh -c /tmp/tr06.txt indo@rpi4-1
+[?2004lindex.html                                                                     0%    0     0.0KB/s   --:-- ETAindex.html                                                                   100% 4356     1.3MB/s   00:00    
+20260519.124138.418385087: START host: macmini name: release.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.124138.423177819: TMP_DIR: /tmp/release.sh.23634.tmp
+20260519.124138.425997676: --- [行1] local=/tmp/tr06_index.html  remote=indo@rpi4-1:/var/www/html/index.html
+20260519.124138.892529717: 差分なし (local=4356 bytes / remote=4356 bytes)
+20260519.124138.895375271: リリースをスキップしました。: /tmp/tr06_index.html
+20260519.124138.898593636: 完了: リリース=0件  スキップ=1件  エラー=0件
+20260519.124138.903843896: END rc: 0
+[?2004h[31m0[0m [[32m0.50s(B[m] 260519-124138 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ exit
+[?2004lexit
+
+スクリプトを 2026-05-19 12:42:00+09:00 に終了 [COMMAND_EXIT_CODE="0"]

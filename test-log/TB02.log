@@ -1,0 +1,15 @@
+スクリプトを 2026-05-19 11:43:29+09:00 に開始 [TERM="xterm-kitty" TTY="/dev/pts/2" COLUMNS="111" LINES="35"]
+pyenv: no such command `virtualenv-init'
+indo        1954       1  0 11:15 ?        00:00:00 /usr/bin/[01;31m[Kssh-agent[m[K -s
+[?2004h[31m0[0m [[32m0.01s(B[m] 260519-114329 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ cd /tmp
+[?2004l[?2004h[31m0[0m [[32m0.00s(B[m] 260519-114454 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m/tmp[0m:
+$ [7m/home/indo/Public/security_monitor_2/inventory/backup.sh dummy@host[27m[C[C/home/indo/Public/security_monitor_2/inventory/backup.sh dummy@host
+[?2004l20260519.114509.560843824: START host: macmini name: backup.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.114509.563972613: ERROR: ./backup.txt が見つかりません
+20260519.114509.566230825: END rc: 1
+[?2004h[31m1[0m [[32m0.02s(B[m] 260519-114509 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m/tmp[0m:
+$ exit
+[?2004lexit
+
+スクリプトを 2026-05-19 11:45:25+09:00 に終了 [COMMAND_EXIT_CODE="1"]

@@ -1,0 +1,175 @@
+<svg viewBox="0 0 920 430" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .server  { fill:#fff5e6; stroke:#c05621; stroke-width:2; }
+      .title   { font-family:'Segoe UI',sans-serif; font-size:18px; font-weight:bold; fill:#2d3748; }
+      .name    { font-family:'Segoe UI',sans-serif; font-size:14px; font-weight:bold; fill:#2d3748; }
+      .camname { font-family:'Segoe UI',sans-serif; font-size:11px; font-weight:bold; fill:#2d3748; }
+      .sub     { font-family:'Segoe UI',sans-serif; font-size:11px; fill:#4a5568; }
+      .flow    { font-family:'Segoe UI',sans-serif; font-size:11px; font-weight:bold; fill:#2d3748; }
+      .note    { font-family:'Segoe UI',sans-serif; font-size:11px; fill:#718096; }
+      .stream  { stroke:#2c5282; stroke-width:2; fill:none; }
+      .backup  { stroke:#c05621; stroke-width:2; fill:none; }
+      .metric  { stroke:#2f855a; stroke-width:2; fill:none; }
+      .bus     { stroke:#718096; stroke-width:2; fill:none; }
+    </style>
+    <marker id="ab" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,9 3,0 6" fill="#2c5282"/>
+    </marker>
+    <marker id="ao" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,9 3,0 6" fill="#c05621"/>
+    </marker>
+    <marker id="agr" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,9 3,0 6" fill="#2f855a"/>
+    </marker>
+    <marker id="ag" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,9 3,0 6" fill="#718096"/>
+    </marker>
+    <!-- 防犯カメラのアイコン -->
+    <symbol id="cam" viewBox="0 0 100 56">
+      <rect x="36" y="0" width="28" height="5" rx="2" fill="#718096"/>
+      <rect x="46" y="3" width="8"  height="13" fill="#718096"/>
+      <rect x="8" y="14" width="84" height="34" rx="10" fill="#dbeafe" stroke="#2c5282" stroke-width="2"/>
+      <circle cx="28" cy="31" r="12"  fill="#4a5568"/>
+      <circle cx="28" cy="31" r="6.5" fill="#1a202c"/>
+      <circle cx="24" cy="27" r="2.5" fill="#cbd5e0"/>
+      <circle cx="80" cy="23" r="3.5" fill="#e53e3e"/>
+    </symbol>
+    <!-- ノートPCのアイコン -->
+    <symbol id="laptop" viewBox="0 0 110 72">
+      <rect x="22" y="5" width="66" height="44" rx="3" fill="#2d3748" stroke="#2c5282" stroke-width="2"/>
+      <rect x="27" y="10" width="56" height="34" fill="#dbeafe"/>
+      <line x1="55" y1="10" x2="55" y2="44" stroke="#90cdf4" stroke-width="1.5"/>
+      <line x1="27" y1="27" x2="83" y2="27" stroke="#90cdf4" stroke-width="1.5"/>
+      <polygon points="22,49 88,49 104,64 6,64" fill="#cbd5e0" stroke="#2c5282" stroke-width="2"/>
+      <rect x="48" y="50" width="14" height="3" rx="1" fill="#718096"/>
+    </symbol>
+    <!-- スマートフォンのアイコン -->
+    <symbol id="phone" viewBox="0 0 50 80">
+      <rect x="7" y="3" width="36" height="74" rx="7" fill="#2d3748" stroke="#2c5282" stroke-width="2"/>
+      <rect x="11" y="12" width="28" height="54" fill="#dbeafe"/>
+      <line x1="11" y1="25.5" x2="39" y2="25.5" stroke="#90cdf4" stroke-width="1.5"/>
+      <line x1="11" y1="39"   x2="39" y2="39"   stroke="#90cdf4" stroke-width="1.5"/>
+      <line x1="11" y1="52.5" x2="39" y2="52.5" stroke="#90cdf4" stroke-width="1.5"/>
+      <rect x="20" y="7" width="10" height="2" rx="1" fill="#718096"/>
+      <circle cx="25" cy="72" r="2.5" fill="#718096"/>
+    </symbol>
+    <!-- Raspberry Pi 4B のアイコン -->
+    <symbol id="rpi" viewBox="0 0 120 80">
+      <rect x="3" y="6" width="114" height="68" rx="6" fill="#2e7d4f" stroke="#1a5c38" stroke-width="2"/>
+      <circle cx="13"  cy="16" r="3.2" fill="#eef2f0"/>
+      <circle cx="107" cy="16" r="3.2" fill="#eef2f0"/>
+      <circle cx="13"  cy="64" r="3.2" fill="#eef2f0"/>
+      <circle cx="107" cy="64" r="3.2" fill="#eef2f0"/>
+      <rect x="26" y="10" width="68" height="9" rx="1" fill="#1a1a1a"/>
+      <rect x="28" y="11" width="64" height="2.6" fill="#d4af37"/>
+      <rect x="40" y="33" width="28" height="26" rx="2" fill="#222222"/>
+      <rect x="100" y="25" width="17" height="14" rx="1" fill="#9aa5ad" stroke="#5a6168" stroke-width="1"/>
+      <rect x="100" y="42" width="17" height="12" rx="1" fill="#2a2a2a"/>
+      <rect x="100" y="56" width="17" height="12" rx="1" fill="#2a2a2a"/>
+      <rect x="3" y="38" width="7"  height="7" fill="#1a1a1a"/>
+      <rect x="3" y="49" width="10" height="7" fill="#1a1a1a"/>
+      <rect x="3" y="59" width="10" height="7" fill="#1a1a1a"/>
+      <rect x="50" y="71" width="18" height="6" rx="1" fill="#1a1a1a"/>
+    </symbol>
+    <!-- Mac mini (Macmini4,1) のアイコン -->
+    <symbol id="macmini" viewBox="0 0 120 90">
+      <polygon points="8,40 60,66 60,84 8,58" fill="#c2c6ca" stroke="#9099a0" stroke-width="1.5"/>
+      <polygon points="60,66 112,40 112,58 60,84" fill="#a9afb5" stroke="#9099a0" stroke-width="1.5"/>
+      <polygon points="60,14 112,40 60,66 8,40" fill="#e8eaec" stroke="#9099a0" stroke-width="1.5"/>
+      <line x1="20" y1="50" x2="44" y2="62" stroke="#7a8086" stroke-width="2"/>
+      <circle cx="50" cy="71" r="2.4" fill="#f7fafc"/>
+    </symbol>
+    <!-- 外付けHDDのアイコン -->
+    <symbol id="exthd" viewBox="0 0 80 112">
+      <polygon points="6,26 38,42 38,98 6,82" fill="#4b515a" stroke="#2d3138" stroke-width="1.5"/>
+      <polygon points="38,42 70,26 70,82 38,98" fill="#3a3f46" stroke="#2d3138" stroke-width="1.5"/>
+      <polygon points="38,10 70,26 38,42 6,26" fill="#6b7280" stroke="#2d3138" stroke-width="1.5"/>
+      <circle cx="19" cy="52" r="2.6" fill="#48bb78"/>
+      <line x1="13" y1="64" x2="31" y2="73" stroke="#2d3138" stroke-width="1.5"/>
+      <line x1="13" y1="71" x2="31" y2="80" stroke="#2d3138" stroke-width="1.5"/>
+    </symbol>
+  </defs>
+
+  <text class="title" x="460" y="28" text-anchor="middle">セキュリティモニター 全体構成図</text>
+
+  <!-- ===== 左：カメラ3台 ===== -->
+  <use href="#cam" x="25" y="54"  width="100" height="56"/>
+  <text class="camname" x="75" y="128" text-anchor="middle">AtomCam Swing #1</text>
+  <use href="#cam" x="25" y="144" width="100" height="56"/>
+  <text class="camname" x="75" y="218" text-anchor="middle">AtomCam2</text>
+  <use href="#cam" x="25" y="234" width="100" height="56"/>
+  <text class="camname" x="75" y="308" text-anchor="middle">AtomCam Swing #2</text>
+
+  <!-- カメラ → 集約バー -->
+  <path class="bus" d="M 125 82  L 175 82"  marker-end="url(#ag)"/>
+  <path class="bus" d="M 125 172 L 175 172" marker-end="url(#ag)"/>
+  <path class="bus" d="M 125 262 L 175 262" marker-end="url(#ag)"/>
+  <line class="bus" x1="175" y1="82" x2="175" y2="302"/>
+
+  <!-- ===== 中央：rpi4-1（映像中継・メトリクスサーバー） ===== -->
+  <use href="#rpi" x="320" y="88" width="120" height="80"/>
+  <text class="name" x="380" y="188" text-anchor="middle">rpi4-1 (192.168.0.60)</text>
+  <text class="sub"  x="380" y="204" text-anchor="middle">MediaMTX・nginx・coturn・push_daemon</text>
+  <text class="sub"  x="380" y="220" text-anchor="middle">映像中継・WebUI配信・メトリクス受信</text>
+
+  <!-- 集約バー → rpi4-1（RTSP） -->
+  <path class="stream" d="M 175 122 L 320 122" marker-end="url(#ab)"/>
+  <text class="flow" x="192" y="115">RTSP/TCP :8554</text>
+
+  <!-- ===== 中央下：rpi4-0（録画受信） ===== -->
+  <use href="#rpi" x="300" y="262" width="120" height="80"/>
+  <text class="name" x="360" y="360" text-anchor="middle">rpi4-0 (192.168.0.58)</text>
+  <text class="sub"  x="360" y="376" text-anchor="middle">Samba — AtomCam録画受信</text>
+
+  <!-- 集約バー → rpi4-0（SMB） -->
+  <path class="backup" d="M 175 302 L 300 302" marker-end="url(#ao)"/>
+  <text class="flow" x="192" y="295">SMB/TCP :445</text>
+
+  <!-- ===== 右下：macmini2010 ＋ 外付けHD ===== -->
+  <use href="#macmini" x="590" y="260" width="108" height="81"/>
+  <text class="name" x="644" y="362" text-anchor="middle">macmini2010</text>
+  <text class="sub"  x="644" y="378" text-anchor="middle">Macmini4,1</text>
+
+  <use href="#exthd" x="712" y="264" width="56" height="78"/>
+  <text class="sub" x="740" y="362" text-anchor="middle">外付けHD</text>
+
+  <!-- rpi4-0 → macmini2010（rsync） -->
+  <path class="backup" d="M 417 302 L 599 302" marker-end="url(#ao)"/>
+  <text class="flow" x="438" y="295">rsync (cron 毎時)</text>
+  <!-- macmini2010 → 外付けHD（USB） -->
+  <path class="backup" d="M 691 302 L 716 302" marker-end="url(#ao)"/>
+  <text class="flow" x="678" y="295">USB</text>
+
+  <!-- ===== 右：クライアント ===== -->
+  <use href="#laptop" x="690" y="50" width="100" height="66"/>
+  <text class="camname" x="740" y="132" text-anchor="middle">vostro (Chrome キオスク全画面)</text>
+
+  <use href="#laptop" x="665" y="156" width="100" height="66"/>
+  <use href="#phone"  x="783" y="156" width="42"  height="67"/>
+  <text class="camname" x="730" y="238" text-anchor="middle">Linux・Windows・iPhone ブラウザ</text>
+
+  <!-- rpi4-1 → クライアント（映像・WebUI） -->
+  <path class="stream" d="M 440 122 L 620 122" marker-end="url(#ab)"/>
+  <text class="flow" x="452" y="103">HTTP/TCP :80 — WebUI・WHEP配信</text>
+  <text class="flow" x="452" y="116">STUN/UDP :3478 — WebRTC NAT越え</text>
+  <line class="stream" x1="620" y1="83" x2="620" y2="189"/>
+  <path class="stream" d="M 620 83  L 690 83"  marker-end="url(#ab)"/>
+  <path class="stream" d="M 620 189 L 665 189" marker-end="url(#ab)"/>
+
+  <!-- クライアント → rpi4-1（メトリクス送信） -->
+  <path class="metric" d="M 655 222 L 442 155" marker-end="url(#agr)"/>
+  <text class="flow" x="470" y="180" fill="#2f855a">メトリクス送信</text>
+  <text class="flow" x="470" y="194" fill="#2f855a">HTTP POST :80 /api/push</text>
+
+  <!-- ===== 注記 ===== -->
+  <text class="note" x="40" y="404">※ メトリクス送信は vostro・Linux・Windows クライアントが実施（iPhone は閲覧のみ）。8888/8889/9091/9997 は rpi4-1 内部ポート（127.0.0.1）。</text>
+
+  <!-- ===== 凡例 ===== -->
+  <line x1="120" y1="420" x2="152" y2="420" stroke="#2c5282" stroke-width="3"/>
+  <text class="sub" x="160" y="424">映像ストリーミング経路</text>
+  <line x1="340" y1="420" x2="372" y2="420" stroke="#c05621" stroke-width="3"/>
+  <text class="sub" x="380" y="424">録画バックアップ経路</text>
+  <line x1="560" y1="420" x2="592" y2="420" stroke="#2f855a" stroke-width="3"/>
+  <text class="sub" x="600" y="424">メトリクス送信経路</text>
+</svg>

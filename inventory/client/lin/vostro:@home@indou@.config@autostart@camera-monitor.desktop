@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Camera Monitor
+Comment=防犯カメラモニター
+Exec=/home/indou/start-camera-monitor.sh
+X-GNOME-Autostart-enabled=true

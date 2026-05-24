@@ -1,0 +1,29 @@
+#!/bin/bash
+################################################################################
+# 概要 : release.sh 単体テスト用フェイク ssh。
+#        release.sh が発行する mkdir -p / sudo mv を
+#        モックリモートFS($REMOTE_ROOT)上で実行する。呼び出しは $CALL_LOG に記録。
+# 補足 : PATH 先頭に置き、release.sh から実 ssh の代わりに呼ばせる。
+################################################################################
+echo "ssh $*" >> "$CALL_LOG"
+
+# 最後の引数 = リモートで実行するコマンド文字列
+cmd="${!#}"
+
+case "$cmd" in
+    "mkdir -p "*)
+        # mkdir -p 'PATH' → モックリモートFS配下に作成
+        eval "p=(${cmd#mkdir -p })"               # クォート除去（release.sh と同様 eval でパース）
+        mkdir -p "${REMOTE_ROOT}${p[0]}"
+        ;;
+    "sudo mv "*)
+        # sudo mv 'SRC' 'DST' → モックリモートFS内で移動（sudo は無視）
+        eval "p=(${cmd#sudo mv })"
+        mkdir -p "${REMOTE_ROOT}$(dirname "${p[1]}")"
+        mv "${REMOTE_ROOT}${p[0]}" "${REMOTE_ROOT}${p[1]}"
+        ;;
+    *)
+        echo "fake ssh: 未対応コマンド: $cmd" >&2
+        exit 1
+        ;;
+esac

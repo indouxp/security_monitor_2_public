@@ -1,0 +1,76 @@
+スクリプトを 2026-05-19 12:31:57+09:00 に開始 [TERM="xterm-kitty" TTY="/dev/pts/2" COLUMNS="111" LINES="35"]
+pyenv: no such command `virtualenv-init'
+indo        1954       1  0 11:15 ?        00:00:00 /usr/bin/[01;31m[Kssh-agent[m[K -s
+[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123158 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb07_index.html[27m[C[Cscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb07_index.html
+[?2004lindex.html                                                                     0%    0     0.0KB/s   --:-- ETAindex.html                                                                   100% 4356     1.5MB/s   00:00    
+[?2004h[31m0[0m [[32m0.46s(B[m] 260519-123205 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mecho "<!-- tb07 local edit -->" >> /tmp/tb07_index.html[27m[C[Cecho "<!-- tb07 local edit -->" >> /tmp/tb07_index.html
+[?2004lecho "< tb07 local edit -->" >> /tmp/tb07_index.html
+[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123212 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mtouch -t 200001010000 /tmp/tb07_index.html[27m[C[Ctouch -t 200001010000 /tmp/tb07_index.html
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123219 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mecho "/tmp/tb07_index.html /var/www/html/index.html" > /tmp/tb07.txt[27m[C[Cecho "/tmp/tb07_index.html /var/www/html/index.html" > /tmp/tb07.txt
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123225 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m[C[Ccd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123230 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7m../backup.sh -c /tmp/tb07.txt indo@rpi4-1[27m[C[C../backup.sh -c /tmp/tb07.txt indo@rpi4-1
+[?2004l20260519.123236.583944664: START host: macmini name: backup.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.123236.589840001: TMP_DIR: /tmp/backup.sh.19678.tmp
+20260519.123236.592701588: --- [行1] local=/tmp/tb07_index.html  remote=indo@rpi4-1:/var/www/html/index.html
+ファイルに差分があります。バックアップしますか?
+  remote: indo@rpi4-1:/var/www/html/index.html (4356 bytes)
+  local : /tmp/tb07_index.html (4378 bytes)
+  ※ remote が新しい
+  [S)kip / Y)es / C)ancel]: Y
+20260519.123242.406709408: バックアップしました。: indo@rpi4-1:/var/www/html/index.html → /tmp/tb07_index.html
+20260519.123242.410872733: 完了: バックアップ=1件  スキップ=0件  エラー=0件
+20260519.123242.415556575: END rc: 0
+[?2004h[31m0[0m [[32m5.85s(B[m] 260519-123242 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mecho "<!-- tb07 local edit -->" >> /tmp/tb07_index.html [27m[C[Cecho "<!-- tb07 local edit -->" >> /tmp/tb07_index.html 
+[?2004lecho "< tb07 local edit -->" >> /tmp/tb07_index.html 
+[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123306 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mtouch -t 200001010000 /tmp/tb07_index.html[27m[C[Ctouch -t 200001010000 /tmp/tb07_index.html
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123315 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mecho "/tmp/tb07_index.html /var/www/html/index.html" > /tmp/tb07.txt[27m[C[Cecho "/tmp/tb07_index.html /var/www/html/index.html" > /tmp/tb07.txt
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123323 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m[C[Ccd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+[?2004l[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123329 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7m../backup.sh -c /tmp/tb07.txt indo@rpi4-1[27m[C[C../backup.sh -c /tmp/tb07.txt indo@rpi4-1
+[?2004l20260519.123335.074930350: START host: macmini name: backup.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.123335.079542160: TMP_DIR: /tmp/backup.sh.19871.tmp
+20260519.123335.082657373: --- [行1] local=/tmp/tb07_index.html  remote=indo@rpi4-1:/var/www/html/index.html
+ファイルに差分があります。バックアップしますか?
+  remote: indo@rpi4-1:/var/www/html/index.html (4356 bytes)
+  local : /tmp/tb07_index.html (4378 bytes)
+  ※ remote が新しい
+  [S)kip / Y)es / C)ancel]: S
+20260519.123340.633754655: バックアップをスキップしました。: /tmp/tb07_index.html
+20260519.123340.637723107: 完了: バックアップ=0件  スキップ=1件  エラー=0件
+20260519.123340.642457231: END rc: 0
+[?2004h[31m0[0m [[32m5.59s(B[m] 260519-123340 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mecho "<!-- tb07 local edit -->" >> /tmp/tb07_index.html [27m[C[Cecho "<!-- tb07 local edit -->" >> /tmp/tb07_index.html 
+[?2004lecho "< tb07 local edit -->" >> /tmp/tb07_index.html 
+[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123349 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mtouch -t 200001010000 /tmp/tb07_index.html          [27m[C[Ctouch -t 200001010000 /tmp/tb07_index.html          
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123353 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mecho "/tmp/tb07_index.html /var/www/html/index.html" > /tmp/tb07.txt[27m[C[Cecho "/tmp/tb07_index.html /var/www/html/index.html" > /tmp/tb07.txt
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123400 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m[C[Ccd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+[?2004l[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123406 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7m../backup.sh -c /tmp/tb07.txt indo@rpi4-1[27m[C[C../backup.sh -c /tmp/tb07.txt indo@rpi4-1
+[?2004l20260519.123411.807553949: START host: macmini name: backup.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.123411.812497115: TMP_DIR: /tmp/backup.sh.20006.tmp
+20260519.123411.815490592: --- [行1] local=/tmp/tb07_index.html  remote=indo@rpi4-1:/var/www/html/index.html
+ファイルに差分があります。バックアップしますか?
+  remote: indo@rpi4-1:/var/www/html/index.html (4356 bytes)
+  local : /tmp/tb07_index.html (4400 bytes)
+  ※ remote が新しい
+  [S)kip / Y)es / C)ancel]: C
+20260519.123416.232683955: CANCEL: ユーザーによりキャンセルされました
+20260519.123416.239340710: END rc: 0
+[?2004h[31m0[0m [[32m4.45s(B[m] 260519-123416 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ exit
+[?2004lexit
+
+スクリプトを 2026-05-19 12:34:19+09:00 に終了 [COMMAND_EXIT_CODE="0"]

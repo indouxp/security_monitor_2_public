@@ -1,0 +1,41 @@
+スクリプトを 2026-05-13 21:06:52+09:00 に開始 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="191" LINES="47"]
+pyenv: no such command `virtualenv-init'
+indo        1904       1  0 13:20 ?        00:00:00 /usr/bin/ssh-agent -s
+0 [0.01s] 260513-210652 indo@macmini:~/Public/security_monitor_2/test:
+$ ssh indo@rpi4-1
+Linux rpi4-1 6.12.75+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.75-1+rpt1~bookworm (2026-03-11) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Web console: https://rpi4-1:9090/ or https://192.168.0.60:9090/
+
+You have no mail.
+Last login: Wed May 13 20:17:20 2026 from 192.168.0.206
+0 [0.01s] 260513-210706 indo@rpi4-1:~
+systemctl is-active mediamtxtx
+active
+0 [0.03s] 260513-210738 indo@rpi4-1:~
+systemctl is-active coturnrn
+active
+0 [0.02s] 260513-210748 indo@rpi4-1:~
+systemctl is-active nginxnx
+active
+0 [0.02s] 260513-210757 indo@rpi4-1:~
+systemctl is-active push-daemonon
+active
+0 [0.01s] 260513-210807 indo@rpi4-1:~
+systemctl is-active collect-metrics.timerer
+active
+0 [0.02s] 260513-210818 indo@rpi4-1:~
+$ exit
+ログアウト
+Connection to rpi4-1 closed.
+0 [78.08s] 260513-210823 indo@macmini:~/Public/security_monitor_2/test:
+$ exit
+exit
+
+スクリプトを 2026-05-13 21:08:25+09:00 に終了 [COMMAND_EXIT_CODE="0"]

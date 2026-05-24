@@ -1,0 +1,23 @@
+スクリプトを 2026-05-19 12:37:02+09:00 に開始 [TERM="xterm-kitty" TTY="/dev/pts/2" COLUMNS="111" LINES="35"]
+pyenv: no such command `virtualenv-init'
+indo        1954       1  0 11:15 ?        00:00:00 /usr/bin/[01;31m[Kssh-agent[m[K -s
+[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123703 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mecho "dummy_local /tmp/nonexistent_file_tb04" > /tmp/tb04.txt[27m
+[7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m
+[7m../backup.sh -c /tmp/tb04.txt indo@rpi4-1[27m[A[A[C[Cecho "dummy_local /tmp/nonexistent_file_tb04" > /tmp/tb04.txt
+cd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+../backup.sh -c /tmp/tb04.txt indo@rpi4-1
+[?2004l20260519.123708.782270794: START host: macmini name: backup.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.123708.788394586: TMP_DIR: /tmp/backup.sh.21162.tmp
+20260519.123708.791527144: --- [行1] local=./dummy_local  remote=indo@rpi4-1:/tmp/nonexistent_file_tb04
+20260519.123709.290239421: ERROR: リモートファイルの取得失敗: indo@rpi4-1:/tmp/nonexistent_file_tb04
+20260519.123709.294460897: 完了: バックアップ=0件  スキップ=0件  エラー=1件
+20260519.123709.299664236: END rc: 1
+[?2004h[31m1[0m [[32m0.53s(B[m] 260519-123709 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ echo $?
+[?2004l1
+[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123716 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ exit
+[?2004lexit
+
+スクリプトを 2026-05-19 12:37:18+09:00 に終了 [COMMAND_EXIT_CODE="0"]

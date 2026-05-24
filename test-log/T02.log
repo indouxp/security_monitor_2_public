@@ -1,0 +1,60 @@
+スクリプトを 2026-05-13 21:11:18+09:00 に開始 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="191" LINES="47"]
+pyenv: no such command `virtualenv-init'
+indo        1904       1  0 13:20 ?        00:00:00 /usr/bin/ssh-agent -s
+0 [0.01s] 260513-211119 indo@macmini:~/Public/security_monitor_2/test:
+curl -s -o /dev/null -w "%{http_code}" http://192.168.0.60/0/
+2000 [0.02s] 260513-211130 indo@macmini:~/Public/security_monitor_2/test:
+ping -c 3 192.168.0.1212
+PING 192.168.0.12 (192.168.0.12) 56(84) bytes of data.
+64 bytes from 192.168.0.12: icmp_seq=1 ttl=64 time=3.18 ms
+64 bytes from 192.168.0.12: icmp_seq=2 ttl=64 time=4.93 ms
+64 bytes from 192.168.0.12: icmp_seq=3 ttl=64 time=8.13 ms
+
+--- 192.168.0.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 3.180/5.413/8.131/2.050 ms
+0 [2.02s] 260513-211149 indo@macmini:~/Public/security_monitor_2/test:
+$ ping -c 3 192.168.0.17
+PING 192.168.0.7 (192.168.0.7) 56(84) bytes of data.
+64 bytes from 192.168.0.7: icmp_seq=1 ttl=64 time=3.63 ms
+64 bytes from 192.168.0.7: icmp_seq=2 ttl=64 time=0.871 ms
+64 bytes from 192.168.0.7: icmp_seq=3 ttl=64 time=1.04 ms
+
+--- 192.168.0.7 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 0.871/1.845/3.625/1.260 ms
+0 [2.01s] 260513-211155 indo@macmini:~/Public/security_monitor_2/test:
+$ ping -c 3 192.168.0.16
+PING 192.168.0.16 (192.168.0.16) 56(84) bytes of data.
+64 bytes from 192.168.0.16: icmp_seq=1 ttl=64 time=3.55 ms
+64 bytes from 192.168.0.16: icmp_seq=2 ttl=64 time=2.06 ms
+64 bytes from 192.168.0.16: icmp_seq=3 ttl=64 time=25.0 ms
+
+--- 192.168.0.16 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 2.062/10.209/25.013/10.485 ms
+0 [2.04s] 260513-211158 indo@macmini:~/Public/security_monitor_2/test:
+$ ping -c 3 192.168.0.158
+PING 192.168.0.58 (192.168.0.58) 56(84) bytes of data.
+64 bytes from 192.168.0.58: icmp_seq=1 ttl=64 time=0.257 ms
+64 bytes from 192.168.0.58: icmp_seq=2 ttl=64 time=0.286 ms
+64 bytes from 192.168.0.58: icmp_seq=3 ttl=64 time=0.272 ms
+
+--- 192.168.0.58 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2034ms
+rtt min/avg/max/mdev = 0.257/0.271/0.286/0.011 ms
+0 [2.04s] 260513-211205 indo@macmini:~/Public/security_monitor_2/test:
+$ ping -c 3 192.168.0.5154
+PING 192.168.0.154 (192.168.0.154) 56(84) bytes of data.
+64 bytes from 192.168.0.154: icmp_seq=1 ttl=64 time=0.290 ms
+64 bytes from 192.168.0.154: icmp_seq=2 ttl=64 time=0.392 ms
+64 bytes from 192.168.0.154: icmp_seq=3 ttl=64 time=0.336 ms
+
+--- 192.168.0.154 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2073ms
+rtt min/avg/max/mdev = 0.290/0.339/0.392/0.041 ms
+0 [2.08s] 260513-211210 indo@macmini:~/Public/security_monitor_2/test:
+$ exit
+exit
+
+スクリプトを 2026-05-13 21:12:12+09:00 に終了 [COMMAND_EXIT_CODE="0"]

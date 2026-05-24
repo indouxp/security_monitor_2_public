@@ -1,0 +1,12 @@
+[Unit]
+Description=Security Monitor push-metrics (client metrics collector)
+Documentation=https://github.com/tsystem/security_monitor_2
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=indou
+ExecStart=/bin/bash /home/indou/bin/push_metrics.sh
+StandardOutput=journal
+StandardError=journal

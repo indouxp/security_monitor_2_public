@@ -1,0 +1,37 @@
+#!/usr/bin/expect -f
+################################################################################
+# 概要 : release.sh 単体テスト用 expect ドライバ。
+#        擬似端末(pty)を供給して release.sh を起動し、confirm() の /dev/tty
+#        プロンプトへ S/Y/C 回答を順に送出する。release.sh は無改修で動く。
+# 使い方 : drive.exp <release.shパス> <回答列> [release.sh への引数...]
+#          回答列 : 空白区切りの S/Y/C（confirm プロンプトごとに順に送出）
+# 終了コード : release.sh の終了コードをそのまま返す（タイムアウト時は 99）
+################################################################################
+set timeout 15
+set script [lindex $argv 0]                  ;# 試験対象 release.sh のパス
+set ans    [split [lindex $argv 1]]          ;# 回答列（S/Y/C のリスト）
+set rest   [lrange $argv 2 end]              ;# release.sh へ渡す引数
+set idx 0                                    ;# 次に送出する回答のインデックス
+
+spawn bash $script {*}$rest
+
+expect {
+    -re {C\)ancel\]: } {
+        # confirm() のプロンプト検出。回答列の次の回答を送出する。
+        if {$idx < [llength $ans]} {
+            send -- "[lindex $ans $idx]\r"
+        } else {
+            send -- "C\r"                    ;# 想定外の追加プロンプトは C で安全に抜ける
+        }
+        incr idx
+        exp_continue
+    }
+    timeout {
+        puts "\nEXPECT-TIMEOUT"
+        exit 99
+    }
+    eof
+}
+
+catch wait result
+exit [lindex $result 3]                      ;# wait 結果の4要素目 = 終了ステータス

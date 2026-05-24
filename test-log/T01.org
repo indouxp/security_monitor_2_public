@@ -1,0 +1,41 @@
+スクリプトを 2026-05-13 21:06:52+09:00 に開始 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="191" LINES="47"]
+pyenv: no such command `virtualenv-init'
+indo        1904       1  0 13:20 ?        00:00:00 /usr/bin/[01;31m[Kssh-agent[m[K -s
+[?2004h[31m0[0m [[32m0.01s(B[m] 260513-210652 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test[0m:
+$ ssh indo@rpi4-1
+[?2004lLinux rpi4-1 6.12.75+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.75-1+rpt1~bookworm (2026-03-11) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Web console: https://rpi4-1:9090/ or https://192.168.0.60:9090/
+
+You have no mail.
+Last login: Wed May 13 20:17:20 2026 from 192.168.0.206
+[?2004h[31m0[0m [[32m0.01s(B[m] 260513-210706 [32mindo[0m@[4m[31m[1m[5mrpi4-1[0m:~
+$ [7msystemctl is-active mediamtx[27m[C[Csystemctl is-active mediamtx
+[?2004lactive
+[?2004h[31m0[0m [[32m0.03s(B[m] 260513-210738 [32mindo[0m@[4m[31m[1m[5mrpi4-1[0m:~
+$ [7msystemctl is-active coturn[27m[C[Csystemctl is-active coturn
+[?2004lactive
+[?2004h[31m0[0m [[32m0.02s(B[m] 260513-210748 [32mindo[0m@[4m[31m[1m[5mrpi4-1[0m:~
+$ [7msystemctl is-active nginx[27m[C[Csystemctl is-active nginx
+[?2004lactive
+[?2004h[31m0[0m [[32m0.02s(B[m] 260513-210757 [32mindo[0m@[4m[31m[1m[5mrpi4-1[0m:~
+$ [7msystemctl is-active push-daemon[27m[C[Csystemctl is-active push-daemon
+[?2004lactive
+[?2004h[31m0[0m [[32m0.01s(B[m] 260513-210807 [32mindo[0m@[4m[31m[1m[5mrpi4-1[0m:~
+$ [7msystemctl is-active collect-metrics.timer[27m[C[Csystemctl is-active collect-metrics.timer
+[?2004lactive
+[?2004h[31m0[0m [[32m0.02s(B[m] 260513-210818 [32mindo[0m@[4m[31m[1m[5mrpi4-1[0m:~
+$ exit
+[?2004lログアウト
+Connection to rpi4-1 closed.
+[?2004h[31m0[0m [[32m78.08s(B[m] 260513-210823 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test[0m:
+$ exit
+[?2004lexit
+
+スクリプトを 2026-05-13 21:08:25+09:00 に終了 [COMMAND_EXIT_CODE="0"]

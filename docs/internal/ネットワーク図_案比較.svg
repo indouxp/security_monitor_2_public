@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="650" viewBox="0 0 860 650">
+
+<defs>
+  <marker id="ah-push" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#f97316"/>
+  </marker>
+  <marker id="ah-fetch" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/>
+  </marker>
+  <marker id="ah-local" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+  </marker>
+</defs>
+
+<!-- Background -->
+<rect width="860" height="650" fill="#0a0a0f"/>
+
+<!-- Title -->
+<text x="430" y="22"
+      font-family="'Noto Sans JP','Yu Gothic UI',sans-serif"
+      font-size="15" font-weight="bold" fill="#00cfff" text-anchor="middle">
+  ネットワーク構成比較（案1〜案3）
+</text>
+
+<!-- ================================================================
+     CASE 1  y=30, h=183, cy=121
+     push y=103  fetch y=139
+     ================================================================ -->
+<rect x="5" y="30" width="850" height="183" fill="#0d1117" rx="4"/>
+
+<!-- Case1 label -->
+<text x="16" y="46"
+      font-family="'Noto Sans JP','Yu Gothic UI',sans-serif"
+      font-size="12" font-weight="bold" fill="#00cfff">案1: scp + 静的 JSON</text>
+
+<!-- Client box -->
+<rect x="15" y="50" width="238" height="151" fill="#1a1a2e" rx="4"/>
+<text x="134" y="64"
+      font-family="'Noto Sans JP','Yu Gothic UI',sans-serif"
+      font-size="10" fill="#64748b" text-anchor="middle">クライアント群</text>
+<!-- vostro -->
+<rect x="24" y="68" width="220" height="38" fill="#243042" rx="3"/>
+<text x="134" y="83"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">vostro (Debian 13)</text>
+<text x="134" y="99"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">systemd timer + scp</text>
+<!-- Windows -->
+<rect x="24" y="112" width="220" height="38" fill="#243042" rx="3"/>
+<text x="134" y="127" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Windows PC</text>
+<text x="134" y="143" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">タスクスケジューラ + scp (OpenSSH)</text>
+<!-- note -->
+<text x="134" y="178" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#f97316" text-anchor="middle">★ SSH 鍵設定が必要（各クライアント）</text>
+
+<!-- Push arrow  y=103 -->
+<line x1="255" y1="103" x2="585" y2="103"
+      stroke="#f97316" stroke-width="2" marker-end="url(#ah-push)"/>
+<text x="420" y="96"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#f97316" text-anchor="middle">scp /data/{client_ip}.json　SSH 鍵認証</text>
+
+<!-- Fetch arrow  y=139 -->
+<line x1="587" y1="139" x2="257" y2="139"
+      stroke="#22d3ee" stroke-width="2" marker-end="url(#ah-fetch)"/>
+<text x="420" y="132" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#22d3ee" text-anchor="middle">HTTP GET /api/my-metrics　（nginx: $remote_addr.json）</text>
+
+<!-- rpi4-1 box -->
+<rect x="593" y="50" width="252" height="151" fill="#0d2040" rx="4"/>
+<text x="719" y="64"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#64748b" text-anchor="middle">rpi4-1 (192.168.0.60)</text>
+<!-- sshd -->
+<rect x="602" y="68" width="234" height="38" fill="#0d3060" rx="3"/>
+<text x="719" y="83"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">OpenSSH sshd</text>
+<text x="719" y="99"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">authorized_keys（IP制限・scp専用鍵）</text>
+<!-- nginx -->
+<rect x="602" y="112" width="234" height="38" fill="#0d3060" rx="3"/>
+<text x="719" y="127" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">nginx :80</text>
+<text x="719" y="143" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">/api/my-metrics → $remote_addr.json</text>
+<!-- note -->
+<text x="719" y="178" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">/data/{client_ip}.json を静的配信</text>
+
+
+<!-- ================================================================
+     CASE 2  y=223, h=183, cy=314
+     push なし  fetch(rpi4-1) y=331  local y=297
+     ================================================================ -->
+<rect x="5" y="223" width="850" height="183" fill="#0d1117" rx="4"/>
+
+<text x="16" y="239"
+      font-family="'Noto Sans JP','Yu Gothic UI',sans-serif"
+      font-size="12" font-weight="bold" fill="#00cfff">案2: ローカル HTTP API</text>
+
+<!-- Client box -->
+<rect x="15" y="243" width="238" height="151" fill="#1a1a2e" rx="4"/>
+<text x="134" y="257" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#64748b" text-anchor="middle">クライアント群</text>
+<!-- vostro -->
+<rect x="24" y="261" width="220" height="38" fill="#243042" rx="3"/>
+<text x="134" y="276" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">vostro (Debian 13)</text>
+<text x="134" y="292" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">metrics-agent :9999 (systemd常駐)</text>
+<!-- Windows -->
+<rect x="24" y="305" width="220" height="38" fill="#243042" rx="3"/>
+<text x="134" y="320" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Windows PC</text>
+<text x="134" y="336" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">metrics-agent :9999 (Python/PowerShell)</text>
+<!-- note -->
+<text x="134" y="367" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle">★ 各クライアントに agent インストール必要</text>
+<text x="134" y="381" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle">★ CORS ヘッダー必須</text>
+
+<!-- Local fetch arrow (browser → localhost, within client) y=297 -->
+<path d="M 253 290 C 310 290 310 314 253 314"
+      stroke="#a78bfa" stroke-width="1.5" fill="none"
+      stroke-dasharray="5,3" marker-end="url(#ah-local)"/>
+<text x="340" y="296" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle">browser →</text>
+<text x="340" y="309" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle">localhost:9999</text>
+<text x="340" y="322" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle">（CORS必要）</text>
+
+<!-- Fetch arrow to rpi4-1 for rpi4-1.json  y=331 -->
+<line x1="587" y1="331" x2="257" y2="331"
+      stroke="#22d3ee" stroke-width="2" marker-end="url(#ah-fetch)"/>
+<text x="470" y="324" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#22d3ee" text-anchor="middle">HTTP GET /data/rpi4-1.json　（rpi4-1 メトリクスのみ）</text>
+
+<!-- rpi4-1 box -->
+<rect x="593" y="243" width="252" height="151" fill="#0d2040" rx="4"/>
+<text x="719" y="257" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#64748b" text-anchor="middle">rpi4-1 (192.168.0.60)</text>
+<!-- nginx -->
+<rect x="602" y="261" width="234" height="38" fill="#0d3060" rx="3"/>
+<text x="719" y="276" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">nginx :80</text>
+<text x="719" y="292" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">/data/rpi4-1.json のみ配信</text>
+<!-- collect -->
+<rect x="602" y="305" width="234" height="38" fill="#0d3060" rx="3"/>
+<text x="719" y="320" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">collect_metrics.sh</text>
+<text x="719" y="336" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">systemd timer → rpi4-1.json</text>
+<!-- note -->
+<text x="719" y="371" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">クライアントデータは rpi4-1 に保存しない</text>
+<text x="719" y="383" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">（各クライアントが自律で提供）</text>
+
+
+<!-- ================================================================
+     CASE 3  y=416, h=183, cy=507
+     push y=489  fetch y=525
+     ================================================================ -->
+<rect x="5" y="416" width="850" height="183" fill="#0d1117" rx="4"/>
+
+<text x="16" y="432"
+      font-family="'Noto Sans JP','Yu Gothic UI',sans-serif"
+      font-size="12" font-weight="bold" fill="#00cfff">案3: HTTP POST + 送信元 IP 解決　★採用</text>
+
+<!-- Client box -->
+<rect x="15" y="436" width="238" height="151" fill="#1a1a2e" rx="4"/>
+<text x="134" y="450" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#64748b" text-anchor="middle">クライアント群</text>
+<!-- vostro -->
+<rect x="24" y="454" width="220" height="38" fill="#243042" rx="3"/>
+<text x="134" y="469" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">vostro (Debian 13)</text>
+<text x="134" y="485" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">systemd timer + curl</text>
+<!-- Windows -->
+<rect x="24" y="498" width="220" height="38" fill="#243042" rx="3"/>
+<text x="134" y="513" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Windows PC</text>
+<text x="134" y="529" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">タスクスケジューラ + curl (標準搭載)</text>
+<!-- note -->
+<text x="134" y="560" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle">★ 追加インストール不要（curl 標準）</text>
+<text x="134" y="574" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle">★ Linux / Windows 共通スクリプト</text>
+
+<!-- Push arrow  y=489 -->
+<line x1="255" y1="489" x2="585" y2="489"
+      stroke="#f97316" stroke-width="2" marker-end="url(#ah-push)"/>
+<text x="420" y="482" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#f97316" text-anchor="middle">HTTP POST /api/push　{cpu, temp, mem, hostname}</text>
+
+<!-- Fetch arrow  y=525 -->
+<line x1="587" y1="525" x2="257" y2="525"
+      stroke="#22d3ee" stroke-width="2" marker-end="url(#ah-fetch)"/>
+<text x="420" y="518" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#22d3ee" text-anchor="middle">HTTP GET /api/my-metrics　（nginx: $remote_addr.json）</text>
+
+<!-- rpi4-1 box -->
+<rect x="593" y="436" width="252" height="151" fill="#0d2040" rx="4"/>
+<text x="719" y="450" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#64748b" text-anchor="middle">rpi4-1 (192.168.0.60)</text>
+<!-- push-daemon -->
+<rect x="602" y="454" width="234" height="38" fill="#0d3060" rx="3"/>
+<text x="719" y="469" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">push-daemon (Python)</text>
+<text x="719" y="485" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">POST → /data/{remote_ip}.json 書き込み</text>
+<!-- nginx -->
+<rect x="602" y="498" width="234" height="38" fill="#0d3060" rx="3"/>
+<text x="719" y="513" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">nginx :80</text>
+<text x="719" y="529" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">/api/my-metrics → $remote_addr.json</text>
+<!-- note -->
+<text x="719" y="560" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle">★ CORS 不要（同一オリジン）</text>
+<text x="719" y="574" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle">★ クライアント増加時に rpi4-1 変更不要</text>
+
+
+<!-- ================================================================
+     LEGEND
+     ================================================================ -->
+<rect x="5" y="608" width="850" height="36" fill="#0d1117" rx="4"/>
+<line x1="25"  y1="626" x2="60"  y2="626" stroke="#f97316" stroke-width="2" marker-end="url(#ah-push)"/>
+<text x="67" y="626" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#f97316" dominant-baseline="central">メトリクス push（クライアント → rpi4-1）</text>
+<line x1="360" y1="626" x2="395" y2="626" stroke="#22d3ee" stroke-width="2" marker-end="url(#ah-fetch)"/>
+<text x="402" y="626" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#22d3ee" dominant-baseline="central">ブラウザ fetch（rpi4-1 → クライアント）</text>
+<line x1="660" y1="626" x2="695" y2="626" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ah-local)"/>
+<text x="702" y="626" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#a78bfa" dominant-baseline="central">ローカル fetch（CORS 必要）</text>
+
+</svg>

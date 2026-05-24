@@ -1,0 +1,22 @@
+# /etc/systemd/system/mediamtx.service
+# 用途: MediaMTXをサービスとして管理
+
+[Unit]
+Description=MediaMTX RTSP/WebRTC Server
+# ネットワーク起動後に開始
+After=network.target
+
+[Service]
+# 実行ユーザー
+User=root
+# 作業ディレクトリ
+WorkingDirectory=/opt/mediamtx
+# 起動コマンド
+ExecStart=/opt/mediamtx/mediamtx /opt/mediamtx/mediamtx.yml
+# 異常終了時に自動再起動
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+

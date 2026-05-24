@@ -1,0 +1,18 @@
+[Unit]
+Description=Security Monitor push-daemon (metrics POST receiver)
+Documentation=https://github.com/tsystem/security_monitor_2
+After=network.target nginx.service
+Wants=network.target
+
+[Service]
+Type=simple
+User=indo
+Group=indo
+ExecStart=/usr/bin/python3 /home/indo/bin/push_daemon.py
+Restart=always
+RestartSec=5s
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
