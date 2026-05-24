@@ -1,0 +1,10 @@
+# local remote
+# Linux クライアント（vostro 等）へのリリース定義
+# 実行例: ../../release.sh -r indo@cf-sz5
+
+# メトリクス収集スクリプト
+push_metrics.sh /home/indou/bin/push_metrics.sh
+
+# systemd service/timer（30秒ごとに push_metrics.sh を呼び出す）
+vostro:@etc@systemd@system@push-metrics.service /etc/systemd/system/push-metrics.service
+vostro:@etc@systemd@system@push-metrics.timer   /etc/systemd/system/push-metrics.timer

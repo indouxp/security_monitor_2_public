@@ -1,0 +1,33 @@
+スクリプトを 2026-05-19 12:38:52+09:00 に開始 [TERM="xterm-kitty" TTY="/dev/pts/2" COLUMNS="111" LINES="35"]
+pyenv: no such command `virtualenv-init'
+indo        1954       1  0 11:15 ?        00:00:00 /usr/bin/[01;31m[Kssh-agent[m[K -s
+[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123853 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mecho "/tmp/tr03_dummy.txt /home/indo/tr03_dummy.txt" > /tmp/tr03.txt[27m
+[7mecho "test" > /tmp/tr03_dummy.txt[27m
+
+[7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m
+[7m../release.sh -c /tmp/tr03.txt indo@rpi4-1[27m[A[A[A[A[C[Cecho "/tmp/tr03_dummy.txt /home/indo/tr03_dummy.txt" > /tmp/tr03.txt
+echo "test" > /tmp/tr03_dummy.txt
+
+cd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+../release.sh -c /tmp/tr03.txt indo@rpi4-1
+[?2004l20260519.123900.630625368: START host: macmini name: release.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.123900.635166920: TMP_DIR: /tmp/release.sh.22261.tmp
+20260519.123900.637973364: --- [行1] local=/tmp/tr03_dummy.txt  remote=indo@rpi4-1:/home/indo/tr03_dummy.txt
+リモートにファイルが存在しません。新規リリースしますか?
+  local : /tmp/tr03_dummy.txt (5 bytes)
+  remote: indo@rpi4-1:/home/indo/tr03_dummy.txt (なし)
+  [S)kip / Y)es / C)ancel]: 
+S, Y, C のいずれかを入力してください。
+リモートにファイルが存在しません。新規リリースしますか?
+  local : /tmp/tr03_dummy.txt (5 bytes)
+  remote: indo@rpi4-1:/home/indo/tr03_dummy.txt (なし)
+  [S)kip / Y)es / C)ancel]: Y
+20260519.123949.253999498: リリースしました。(新規): /tmp/tr03_dummy.txt → indo@rpi4-1:/home/indo/tr03_dummy.txt
+20260519.123949.257337287: 完了: リリース=1件  スキップ=0件  エラー=0件
+20260519.123949.262414478: END rc: 0
+[?2004h[31m0[0m [[32m48.65s(B[m] 260519-123949 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ exit
+[?2004lexit
+
+スクリプトを 2026-05-19 12:39:53+09:00 に終了 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,40 @@
+#!/bin/bash
+################################################################################
+# 概要 : backup.sh 単体テスト用フェイク scp（ダウンロード専用）。
+#        user@host:path をモックリモートFS($REMOTE_ROOT)から写像してコピーする。
+#        backup.sh はリモート→ローカルのダウンロードしか行わないため download のみ対応。
+#        実ネットワークは使わない。呼び出しは $CALL_LOG に記録する。
+# 補足 : PATH 先頭に置き、backup.sh から実 scp の代わりに呼ばせる。
+################################################################################
+echo "scp $*" >> "$CALL_LOG"
+
+# -p 等のオプションを除いて SRC・DST のパスだけを取り出す
+paths=()                                          # オプションを除いた引数
+for a in "$@"; do
+    case "$a" in
+        -*) ;;                                    # オプションは読み飛ばす
+        *)  paths+=("$a") ;;
+    esac
+done
+src="${paths[0]}"                                 # 転送元
+dst="${paths[1]}"                                 # 転送先
+
+# user@host:path 形式なら path 部分を返す。ローカルパスなら空文字。
+remote_part() {
+    case "$1" in
+        *@*:*) echo "${1#*:}" ;;                  # 最初の : 以降が path
+        *)     echo "" ;;
+    esac
+}
+
+src_remote=$(remote_part "$src")                  # 転送元のリモートパス（空ならローカル）
+
+if [[ -n "$src_remote" ]]; then
+    # ダウンロード（リモート→ローカル）
+    real="${REMOTE_ROOT}${src_remote}"            # モックリモートFS上の実体パス
+    [[ -f "$real" ]] || exit 1                    # リモートに無ければ失敗（backup.sh の取得失敗判定に使われる）
+    cp -p "$real" "$dst"
+else
+    echo "fake scp: ダウンロード以外は未対応です: $*" >&2
+    exit 1
+fi

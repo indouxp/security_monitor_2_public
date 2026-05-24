@@ -1,0 +1,13 @@
+indo@macmini2010:~$ date
+Thu May 14 12:05:58 AM JST 2026
+indo@macmini2010:~$ ls -l /mnt/usb_disk/atomcam/atomcam*/record/20260513/* | grep atomcam2 | head -2
+-rwxrw-rw- 1 indo indo 7203377 May 13 00:01 /mnt/usb_disk/atomcam/atomcam2/record/20260513/000000.mp4
+-rwxrw-rw- 1 indo indo 7541335 May 13 00:02 /mnt/usb_disk/atomcam/atomcam2/record/20260513/000100.mp4
+indo@macmini2010:~$ ls -l /mnt/usb_disk/atomcam/atomcam*/record/20260513/* | grep atomcamswing | head -2
+-rwxrw-rw- 1 indo indo 7566575 May 13 00:01 /mnt/usb_disk/atomcam/atomcamswing2/record/20260513/000000.mp4
+-rwxrw-rw- 1 indo indo 7776843 May 13 00:02 /mnt/usb_disk/atomcam/atomcamswing2/record/20260513/000100.mp4
+indo@macmini2010:~$ ls -l /mnt/usb_disk/atomcam/atomcam*/record/20260513/* | grep atomcamswing2 | head -2
+-rwxrw-rw- 1 indo indo 7566575 May 13 00:01 /mnt/usb_disk/atomcam/atomcamswing2/record/20260513/000000.mp4
+-rwxrw-rw- 1 indo indo 7776843 May 13 00:02 /mnt/usb_disk/atomcam/atomcamswing2/record/20260513/000100.mp4
+indo@macmini2010:~$ 
+

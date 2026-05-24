@@ -1,0 +1,18 @@
+# local remote
+@var@www@html@index.html /var/www/html/index.html
+@var@www@html@app.js     /var/www/html/app.js
+@var@www@html@style.css  /var/www/html/style.css
+
+# push-daemon（メトリクス受信デーモン）
+push_daemon.py /usr/local/sbin/push_daemon.py
+
+# rpi4-1 自己収集スクリプト
+collect_metrics.sh /usr/local/sbin/collect_metrics.sh
+
+# systemd service/timer
+@etc@systemd@system@push-daemon.service    /etc/systemd/system/push-daemon.service
+@etc@systemd@system@collect-metrics.service /etc/systemd/system/collect-metrics.service
+@etc@systemd@system@collect-metrics.timer   /etc/systemd/system/collect-metrics.timer
+
+# nginx 設定（既存設定と内容を確認してからコピーすること）
+@etc@nginx@sites-available@security-monitor.conf /etc/nginx/sites-available/security-monitor.conf

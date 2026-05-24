@@ -1,0 +1,11 @@
+[Unit]
+Description=Security Monitor collect-metrics timer (30s interval)
+Documentation=https://github.com/tsystem/security_monitor_2
+
+[Timer]
+OnCalendar=*:*:00/30
+AccuracySec=1s
+Unit=collect-metrics.service
+
+[Install]
+WantedBy=timers.target

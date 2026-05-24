@@ -1,0 +1,49 @@
+###############################################################################
+# MediaMTX 設定ファイル
+# 用途: AtomCam 3台のRTSPストリームをWebRTCで配信
+###############################################################################
+
+# --- ログ設定 ---
+logLevel: info
+logDestinations: [file]
+logFile: /var/log/mediamtx.log
+
+# --- RTSP受信設定 ---
+rtsp: yes
+rtspAddress: :8554
+
+# --- WebRTC配信設定 ---
+webrtc: yes
+webrtcAddress: :8889
+
+# --- HLS設定（フォールバック用：Safari等向け）---
+hls: yes
+hlsAddress: :8888
+
+# --- API設定（接続状態確認用）---
+api: yes
+apiAddress: :9997
+
+# --- カメラパス定義 ---
+paths:
+
+  # AtomCam Swing #1（二階部屋左側）
+  swing1:
+    source: rtsp://192.168.0.12:8554/video0_unicast
+    # オンデマンドではなく常時接続
+    sourceOnDemand: no
+    # 切断時の再接続待機時間
+    # sourceReconnectPause: 3s
+
+  # AtomCam 2（玄関）
+  atomcam2:
+    source: rtsp://192.168.0.7:8554/video0_unicast
+    sourceOnDemand: no
+    # sourceReconnectPause: 3s
+
+  # AtomCam Swing #2（二階部屋右側）
+  swing2:
+    source: rtsp://192.168.0.16:8554/video0_unicast
+    sourceOnDemand: no
+    # sourceReconnectPause: 3s
+

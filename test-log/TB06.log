@@ -1,0 +1,24 @@
+スクリプトを 2026-05-19 12:30:00+09:00 に開始 [TERM="xterm-kitty" TTY="/dev/pts/2" COLUMNS="111" LINES="35"]
+pyenv: no such command `virtualenv-init'
+indo        1954       1  0 11:15 ?        00:00:00 /usr/bin/[01;31m[Kssh-agent[m[K -s
+[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123001 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb06_index.html[27m[C[Cscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb06_index.html
+[?2004lindex.html                                                                     0%    0     0.0KB/s   --:-- ETAindex.html                                                                   100% 4356     1.5MB/s   00:00    
+[?2004h[31m0[0m [[32m0.46s(B[m] 260519-123005 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mecho "/tmp/tb06_index.html /var/www/html/index.html" > /tmp/tb06.txt[27m[C[Cecho "/tmp/tb06_index.html /var/www/html/index.html" > /tmp/tb06.txt
+[?2004l[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123018 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m[C[Ccd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123025 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7m../backup.sh -c /tmp/tb06.txt indo@rpi4-1[27m[C[C../backup.sh -c /tmp/tb06.txt indo@rpi4-1
+[?2004l20260519.123032.857834671: START host: macmini name: backup.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.123032.863966289: TMP_DIR: /tmp/backup.sh.19027.tmp
+20260519.123032.867523318: --- [行1] local=/tmp/tb06_index.html  remote=indo@rpi4-1:/var/www/html/index.html
+20260519.123033.349124794: 差分なし (remote=4356 bytes / local=4356 bytes)
+20260519.123033.352040656: バックアップをスキップしました。: /tmp/tb06_index.html
+20260519.123033.355089981: 完了: バックアップ=0件  スキップ=1件  エラー=0件
+20260519.123033.360173845: END rc: 0
+[?2004h[31m0[0m [[32m0.52s(B[m] 260519-123033 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ exit
+[?2004lexit
+
+スクリプトを 2026-05-19 12:30:40+09:00 に終了 [COMMAND_EXIT_CODE="0"]

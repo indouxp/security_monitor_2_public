@@ -1,0 +1,15 @@
+0 [0.02s] 260514-000255 indo@rpi4-0:~
+$ date; ls -lhrt /mnt/usb_share/atomcam*/record/20260514/* | sort -k9
+2026年  5月 14日 木曜日 00:03:05 JST
+-rwxrw-rw- 1 nobody nogroup 7.2M  5月 14 00:01 /mnt/usb_share/atomcam2/record/20260514/000000.mp4
+-rwxrw-rw- 1 nobody nogroup 7.5M  5月 14 00:02 /mnt/usb_share/atomcam2/record/20260514/000100.mp4
+-rwxrw-rw- 1 nobody nogroup 2.7M  5月 14 00:03 /mnt/usb_share/atomcam2/record/20260514/000200.mp4
+-rwxrw-rw- 1 nobody nogroup 6.9M  5月 14 00:01 /mnt/usb_share/atomcamswing/record/20260514/000000.mp4
+-rwxrw-rw- 1 nobody nogroup 7.1M  5月 14 00:02 /mnt/usb_share/atomcamswing/record/20260514/000100.mp4
+-rwxrw-rw- 1 nobody nogroup 256K  5月 14 00:03 /mnt/usb_share/atomcamswing/record/20260514/000200.mp4
+-rwxrw-rw- 1 nobody nogroup 6.5M  5月 14 00:01 /mnt/usb_share/atomcamswing2/record/20260514/000000.mp4
+-rwxrw-rw- 1 nobody nogroup 6.6M  5月 14 00:02 /mnt/usb_share/atomcamswing2/record/20260514/000100.mp4
+-rwxrw-rw- 1 nobody nogroup 5.9M  5月 14 00:03 /mnt/usb_share/atomcamswing2/record/20260514/000200.mp4
+0 [0.01s] 260514-000305 indo@rpi4-0:~
+$ 
+

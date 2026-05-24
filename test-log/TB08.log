@@ -1,0 +1,82 @@
+スクリプトを 2026-05-19 12:34:47+09:00 に開始 [TERM="xterm-kitty" TTY="/dev/pts/2" COLUMNS="111" LINES="35"]
+pyenv: no such command `virtualenv-init'
+indo        1954       1  0 11:15 ?        00:00:00 /usr/bin/[01;31m[Kssh-agent[m[K -s
+[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123447 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb08_index.html[27m[C[Cscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb08_index.html
+[?2004lindex.html                                                                     0%    0     0.0KB/s   --:-- ETAindex.html                                                                   100% 4356     1.4MB/s   00:00    
+[?2004h[31m0[0m [[32m0.47s(B[m] 260519-123454 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mecho "<!-- tb08 local edit -->" >> /tmp/tb08_index.html   # ローカル内容に差分を作る[27m[C[Cecho "<!-- tb08 local edit -->" >> /tmp/tb08_index.html   # ローカル内容に差分を作る
+[?2004lecho "< tb08 local edit -->" >> /tmp/tb08_index.html   # ローカル内容に差分を作る
+[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123501 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mtouch /tmp/tb08_index.html                                # ローカルを現在日時に[27m[C[Ctouch /tmp/tb08_index.html                                # ローカルを現在日時に
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123507 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mecho "/tmp/tb08_index.html /var/www/html/index.html" > /tmp/tb08.txt[27m[C[Cecho "/tmp/tb08_index.html /var/www/html/index.html" > /tmp/tb08.txt
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123513 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/test-log[0m:
+$ [7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m[C[Ccd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+[?2004l[?2004h[31m0[0m [[32m0.01s(B[m] 260519-123518 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7m../backup.sh -c /tmp/tb08.txt indo@rpi4-1[27m[C[C../backup.sh -c /tmp/tb08.txt indo@rpi4-1
+[?2004l20260519.123524.535407919: START host: macmini name: backup.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.123524.540130453: TMP_DIR: /tmp/backup.sh.20443.tmp
+20260519.123524.543757924: --- [行1] local=/tmp/tb08_index.html  remote=indo@rpi4-1:/var/www/html/index.html
+ファイルに差分があります。バックアップしますか?
+  remote: indo@rpi4-1:/var/www/html/index.html (4356 bytes)
+  local : /tmp/tb08_index.html (4378 bytes)
+  ※ local が新しい
+  [S)kip / Y)es / C)ancel]: Y
+20260519.123533.044640980: バックアップしました。: indo@rpi4-1:/var/www/html/index.html → /tmp/tb08_index.html
+20260519.123533.049649023: 完了: バックアップ=1件  スキップ=0件  エラー=0件
+20260519.123533.055678772: END rc: 0
+[?2004h[31m0[0m [[32m8.54s(B[m] 260519-123533 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb08_index.html[27m
+[7mecho "<!-- tb08 local edit -->" >> /tmp/tb08_index.html   # ローカル内容に差分を作る[27m
+[7mtouch /tmp/tb08_index.html                                # ローカルを現在日時に[27m
+[7mecho "/tmp/tb08_index.html /var/www/html/index.html" > /tmp/tb08.txt[27m[A[A[A[C[Cscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb08_index.html
+echo "<!-- tb08 local edit -->" >> /tmp/tb08_index.html   # ローカル内容に差分を作る
+touch /tmp/tb08_index.html                                # ローカルを現在日時に
+echo "/tmp/tb08_index.html /var/www/html/index.html" > /tmp/tb08.txt
+[?2004lindex.html                                                                     0%    0     0.0KB/s   --:-- ETAindex.html                                                                   100% 4356     1.3MB/s   00:00    
+echo "< tb08 local edit -->" >> /tmp/tb08_index.html   # ローカル内容に差分を作る
+[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123545 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m
+[7m../backup.sh -c /tmp/tb08.txt indo@rpi4-1[27m[A[C[Ccd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+../backup.sh -c /tmp/tb08.txt indo@rpi4-1
+[?2004l20260519.123552.512338077: START host: macmini name: backup.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.123552.517077396: TMP_DIR: /tmp/backup.sh.20587.tmp
+20260519.123552.520343837: --- [行1] local=/tmp/tb08_index.html  remote=indo@rpi4-1:/var/www/html/index.html
+ファイルに差分があります。バックアップしますか?
+  remote: indo@rpi4-1:/var/www/html/index.html (4356 bytes)
+  local : /tmp/tb08_index.html (4378 bytes)
+  ※ local が新しい
+  [S)kip / Y)es / C)ancel]: S
+20260519.123556.633765217: バックアップをスキップしました。: /tmp/tb08_index.html
+20260519.123556.637368076: 完了: バックアップ=0件  スキップ=1件  エラー=0件
+20260519.123556.641926346: END rc: 0
+[?2004h[31m0[0m [[32m4.15s(B[m] 260519-123556 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb08_index.html[27m
+[7mecho "<!-- tb08 local edit -->" >> /tmp/tb08_index.html   # ローカル内容に差分を作る[27m
+[7mtouch /tmp/tb08_index.html                                # ローカルを現在日時に[27m
+[7mecho "/tmp/tb08_index.html /var/www/html/index.html" > /tmp/tb08.txt[27m[A[A[A[C[Cscp -p indo@rpi4-1:/var/www/html/index.html /tmp/tb08_index.html
+echo "<!-- tb08 local edit -->" >> /tmp/tb08_index.html   # ローカル内容に差分を作る
+touch /tmp/tb08_index.html                                # ローカルを現在日時に
+echo "/tmp/tb08_index.html /var/www/html/index.html" > /tmp/tb08.txt
+[?2004lindex.html                                                                     0%    0     0.0KB/s   --:-- ETAindex.html                                                                   100% 4356     1.3MB/s   00:00    
+echo "< tb08 local edit -->" >> /tmp/tb08_index.html   # ローカル内容に差分を作る
+[?2004h[31m0[0m [[32m0.00s(B[m] 260519-123604 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ [7mcd /home/indo/Public/security_monitor_2/inventory/rpi4-1[27m
+[7m../backup.sh -c /tmp/tb08.txt indo@rpi4-1[27m[A[C[Ccd /home/indo/Public/security_monitor_2/inventory/rpi4-1
+../backup.sh -c /tmp/tb08.txt indo@rpi4-1
+[?2004l20260519.123610.201148041: START host: macmini name: backup.sh dir: /home/indo/Public/security_monitor_2/inventory
+20260519.123610.205451499: TMP_DIR: /tmp/backup.sh.20690.tmp
+20260519.123610.208211817: --- [行1] local=/tmp/tb08_index.html  remote=indo@rpi4-1:/var/www/html/index.html
+ファイルに差分があります。バックアップしますか?
+  remote: indo@rpi4-1:/var/www/html/index.html (4356 bytes)
+  local : /tmp/tb08_index.html (4378 bytes)
+  ※ local が新しい
+  [S)kip / Y)es / C)ancel]: C
+20260519.123613.841418230: CANCEL: ユーザーによりキャンセルされました
+20260519.123613.847081579: END rc: 0
+[?2004h[31m0[0m [[32m3.66s(B[m] 260519-123613 [32mindo[0m@[4m[30m[5m[1m[91mmacmini[0m:[46m~/Public/security_monitor_2/inventory/rpi4-1[0m:
+$ exit
+[?2004lexit
+
+スクリプトを 2026-05-19 12:36:17+09:00 に終了 [COMMAND_EXIT_CODE="0"]

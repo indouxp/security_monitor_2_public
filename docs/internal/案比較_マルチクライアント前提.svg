@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510">
+
+  <!-- ==================== Background ==================== -->
+  <rect width="800" height="510" fill="#0a0a0f"/>
+
+  <!-- ==================== Title ==================== -->
+  <text x="400" y="26"
+        font-family="'Noto Sans JP','Yu Gothic UI','Hiragino Kaku Gothic Pro',sans-serif"
+        font-size="15" font-weight="bold" fill="#00cfff" text-anchor="middle">
+    案の再比較（マルチクライアント前提）
+  </text>
+
+  <!-- ==================== HEADER ROW (y=38, h=54) ==================== -->
+  <rect x="10"  y="38" width="190" height="54" fill="#0d1117" rx="3"/>
+  <rect x="203" y="38" width="191" height="54" fill="#1a1a2e" rx="3"/>
+  <rect x="397" y="38" width="197" height="54" fill="#1a1a2e" rx="3"/>
+  <rect x="597" y="38" width="193" height="54" fill="#1a1a2e" rx="3"/>
+
+  <text x="105" y="65"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="13" font-weight="bold" fill="#888"   text-anchor="middle" dominant-baseline="central">項目</text>
+  <text x="298" y="54"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="13" font-weight="bold" fill="#00cfff" text-anchor="middle">案1</text>
+  <text x="298" y="74"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#00cfff" text-anchor="middle">scp + 静的 JSON</text>
+  <text x="495" y="54"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="13" font-weight="bold" fill="#00cfff" text-anchor="middle">案2</text>
+  <text x="495" y="74"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#00cfff" text-anchor="middle">ローカル HTTP API</text>
+  <text x="694" y="54"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="13" font-weight="bold" fill="#00cfff" text-anchor="middle">案3 ★採用</text>
+  <text x="694" y="74"  font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#00cfff" text-anchor="middle">HTTP POST + IP解決</text>
+
+  <!-- ==================== ROW 1: rpi4-1メトリクス（固定） y=95, h=50, cy=120 ==================== -->
+  <rect x="10"  y="95" width="190" height="50" fill="#0f172a" rx="3"/>
+  <rect x="203" y="95" width="191" height="50" fill="#0d3b20" rx="3"/>
+  <rect x="397" y="95" width="197" height="50" fill="#0d3b20" rx="3"/>
+  <rect x="597" y="95" width="193" height="50" fill="#0d3b20" rx="3"/>
+
+  <text x="105" y="109" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">rpi4-1 メトリクス</text>
+  <text x="105" y="131" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">（固定）</text>
+  <text x="298" y="120" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">○ 対応可</text>
+  <text x="495" y="120" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">○ 対応可</text>
+  <text x="694" y="120" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">○ 対応可</text>
+
+  <!-- ==================== ROW 2: クライアントメトリクス（動的） y=148, h=50, cy=173 ==================== -->
+  <rect x="10"  y="148" width="190" height="50" fill="#0f172a" rx="3"/>
+  <rect x="203" y="148" width="191" height="50" fill="#3b0d0d" rx="3"/>
+  <rect x="397" y="148" width="197" height="50" fill="#0d3b20" rx="3"/>
+  <rect x="597" y="148" width="193" height="50" fill="#0d3b20" rx="3"/>
+
+  <text x="105" y="162" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">クライアント</text>
+  <text x="105" y="184" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">メトリクス（動的）</text>
+  <text x="298" y="162" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle">✗ vostro</text>
+  <text x="298" y="184" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle">固定</text>
+  <text x="495" y="173" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">✓ 動的対応</text>
+  <text x="694" y="173" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">✓ 動的対応</text>
+
+  <!-- ==================== ROW 3: マルチクライアント対応 y=201, h=50, cy=226 ==================== -->
+  <rect x="10"  y="201" width="190" height="50" fill="#0f172a" rx="3"/>
+  <rect x="203" y="201" width="191" height="50" fill="#3b0d0d" rx="3"/>
+  <rect x="397" y="201" width="197" height="50" fill="#0d3b20" rx="3"/>
+  <rect x="597" y="201" width="193" height="50" fill="#0d3b20" rx="3"/>
+
+  <text x="105" y="215" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">マルチクライアント</text>
+  <text x="105" y="237" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">対応</text>
+  <text x="298" y="226" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle" dominant-baseline="central">✗ 非対応</text>
+  <text x="495" y="226" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">✓ 対応</text>
+  <text x="694" y="226" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">✓ 対応</text>
+
+  <!-- ==================== ROW 4: CORS対応 y=254, h=50, cy=279 ==================== -->
+  <rect x="10"  y="254" width="190" height="50" fill="#0f172a" rx="3"/>
+  <rect x="203" y="254" width="191" height="50" fill="#0d3b20" rx="3"/>
+  <rect x="397" y="254" width="197" height="50" fill="#3b2a0d" rx="3"/>
+  <rect x="597" y="254" width="193" height="50" fill="#0d3b20" rx="3"/>
+
+  <text x="105" y="279" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" dominant-baseline="central">CORS 対応</text>
+  <text x="298" y="279" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">不要</text>
+  <text x="495" y="279" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fcd34d" text-anchor="middle" dominant-baseline="central">必要</text>
+  <text x="694" y="279" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">不要</text>
+
+  <!-- ==================== ROW 5: rpi4-1側の追加構成 y=307, h=50, cy=332 ==================== -->
+  <rect x="10"  y="307" width="190" height="50" fill="#0f172a" rx="3"/>
+  <rect x="203" y="307" width="191" height="50" fill="#0d3b20" rx="3"/>
+  <rect x="397" y="307" width="197" height="50" fill="#0d3b20" rx="3"/>
+  <rect x="597" y="307" width="193" height="50" fill="#3b2a0d" rx="3"/>
+
+  <text x="105" y="321" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">rpi4-1 側の</text>
+  <text x="105" y="343" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">追加構成</text>
+  <text x="298" y="332" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">最小</text>
+  <text x="495" y="332" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">最小</text>
+  <text x="694" y="321" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fcd34d" text-anchor="middle">△ デーモン</text>
+  <text x="694" y="343" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fcd34d" text-anchor="middle">1つ必要</text>
+
+  <!-- ==================== ROW 6: 各クライアントへの展開 y=360, h=50, cy=385 ==================== -->
+  <rect x="10"  y="360" width="190" height="50" fill="#0f172a" rx="3"/>
+  <rect x="203" y="360" width="191" height="50" fill="#3b2a0d" rx="3"/>
+  <rect x="397" y="360" width="197" height="50" fill="#3b2a0d" rx="3"/>
+  <rect x="597" y="360" width="193" height="50" fill="#0d3b20" rx="3"/>
+
+  <text x="105" y="374" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">各クライアント</text>
+  <text x="105" y="396" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">への展開</text>
+  <text x="298" y="374" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fcd34d" text-anchor="middle">△ scp +</text>
+  <text x="298" y="396" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fcd34d" text-anchor="middle">SSH 鍵設定</text>
+  <text x="495" y="374" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fcd34d" text-anchor="middle">△ agent</text>
+  <text x="495" y="396" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fcd34d" text-anchor="middle">インストール</text>
+  <text x="694" y="385" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">✓ curl のみ</text>
+
+  <!-- ==================== ROW 7: Windows対応 y=413, h=50, cy=438 ==================== -->
+  <rect x="10"  y="413" width="190" height="50" fill="#0f172a" rx="3"/>
+  <rect x="203" y="413" width="191" height="50" fill="#3b2a0d" rx="3"/>
+  <rect x="397" y="413" width="197" height="50" fill="#3b0d0d" rx="3"/>
+  <rect x="597" y="413" width="193" height="50" fill="#0d3b20" rx="3"/>
+
+  <text x="105" y="438" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" dominant-baseline="central">Windows 対応</text>
+  <text x="298" y="427" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fcd34d" text-anchor="middle">△ SSH 鍵</text>
+  <text x="298" y="449" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fcd34d" text-anchor="middle">設定が必要</text>
+  <text x="495" y="438" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle" dominant-baseline="central">✗ 困難</text>
+  <text x="694" y="438" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" dominant-baseline="central">✓ 標準対応</text>
+
+  <!-- ==================== LEGEND (y=472, h=30) ==================== -->
+  <rect x="10" y="472" width="780" height="30" fill="#0d1117" rx="3"/>
+  <rect x="30"  y="480" width="14" height="14" fill="#0d3b20" rx="2"/>
+  <text x="50"  y="487" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#6ee7b7" dominant-baseline="central">✓ / ○ 対応可・良好</text>
+  <rect x="230" y="480" width="14" height="14" fill="#3b2a0d" rx="2"/>
+  <text x="250" y="487" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#fcd34d" dominant-baseline="central">△ 条件付き・要注意</text>
+  <rect x="450" y="480" width="14" height="14" fill="#3b0d0d" rx="2"/>
+  <text x="470" y="487" font-family="'Noto Sans JP','Yu Gothic UI',sans-serif" font-size="11" fill="#fca5a5" dominant-baseline="central">✗ 非対応・問題あり</text>
+
+</svg>
