@@ -1,7 +1,7 @@
 # security_monitor_2
 
-自宅LAN内に設置した **AtomCam 3台** の映像を1画面に集約して閲覧するセキュリティモニター。
-映像中継には MediaMTX を使用し、WebRTC(WHEP) でブラウザに表示する（フェーズ4完成版）。
+自宅LAN内に設置した **AtomCam 3台** の映像を1画面に集約して閲覧するセキュリティモニターです。
+映像中継には MediaMTX を使用し、WebRTC(WHEP) でブラウザに表示します（フェーズ4完成版）。
 
 ## 利用上の注意（セキュリティ）
 
@@ -35,9 +35,9 @@ OSS としての利用・改変・再配布は [LICENSE](LICENSE)（MIT）に基
 | macmini2010 (Macmini4,1 ubuntu 22.04) | 192.168.0.206 | 録画バックアップ（不定期起動） |
 | vostro (DELL Vostro 1520 Debian 13.4) | 192.168.0.154 | 専用表示端末（Chromeキオスクモード） |
 
-rpi4-1 上で MediaMTX（映像中継）・nginx（WebUI配信・APIプロキシ）・coturn（STUN）・push_daemon.py（メトリクス受信）が稼働する。
+rpi4-1 上で MediaMTX（映像中継）・nginx（WebUI配信・APIプロキシ）・coturn（STUN）・push_daemon.py（メトリクス受信）が稼働します。
 
-詳細は [docs/基本設計書.md](docs/基本設計書.md) を参照。
+詳細は [docs/基本設計書.md](docs/基本設計書.md) を参照してください。
 
 ## ディレクトリ構成
 
@@ -70,9 +70,9 @@ security_monitor_2/
 
 ## デプロイ
 
-`inventory/release.sh` でリモートホストへ設定ファイルを配備し、`inventory/backup.sh` で取得する。
-配備先のマッピングは各ディレクトリの `release.txt` に定義される。
-両スクリプトはカレントディレクトリの `release.txt` を既定で読むため、対象ディレクトリへ移動してから実行する。
+`inventory/release.sh` でリモートホストへ設定ファイルを配備し、`inventory/backup.sh` で取得します。
+配備先のマッピングは各ディレクトリの `release.txt` に定義されます。
+両スクリプトはカレントディレクトリの `release.txt` を既定で読むため、対象ディレクトリへ移動してから実行します。
 
 ```sh
 # 配備例（rpi4-1 の設定ファイルを配備）
@@ -83,7 +83,7 @@ cd inventory/rpi4-1
 ../release.sh -c release.txt indo@rpi4-1
 ```
 
-手順の詳細は [docs/環境設定手順書.md](docs/環境設定手順書.md) を参照。
+手順の詳細は [docs/環境設定手順書.md](docs/環境設定手順書.md) を参照してください。
 
 ## 免責事項(Disclaimer)
 
