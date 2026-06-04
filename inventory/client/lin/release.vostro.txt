@@ -2,6 +2,9 @@
 # Linux クライアント（vostro 等）へのリリース定義
 # 実行例: ../../release.sh -r indo@cf-sz5
 
+# kisok
+vostro:@home@indou@start-camera-monitor.sh /home/indou/start-camera-monitor.sh
+
 # メトリクス収集スクリプト
 push_metrics.sh /home/indou/bin/push_metrics.sh
 
