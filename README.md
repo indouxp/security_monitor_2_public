@@ -53,8 +53,7 @@ security_monitor_2/
 ├── ut/                   各スクリプトの単体テストフレームワーク（shell / Python / PowerShell）
 ├── test/                 結合テスト用モックサーバー・Playwright テスト
 ├── test-log/             テスト実施ログ(手動)
-├── tmp/                  一時ファイル・参照ファイル（git管理対象外）
-└── claude-logs/          開発セッションログ
+└── tmp/                  一時ファイル・参照ファイル（git管理対象外）
 ```
 
 ## ドキュメント
